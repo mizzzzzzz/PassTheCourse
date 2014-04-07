@@ -18,23 +18,12 @@ public class Notified extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_notified);
 		tv_name = (TextView)findViewById(R.id.notify_name);
-		tv_class = (TextView)findViewById(R.id.notify_class);
-		tv_show = (TextView)findViewById(R.id.notify_show);
 	}
 
-	public void onResume(){
-		super.onResume();
-		Intent intent = getIntent();
-		String content = intent.getStringExtra("content");
-		Log.v("content",content);
-		tv_name.setText(content);
-	}
-	
 	public void onStart() {
 		super.onStart();
 		Intent intent = getIntent();
 		String content = intent.getStringExtra("content");
-		Log.v("content",content);
 		tv_name.setText(content);
 	}
 	
